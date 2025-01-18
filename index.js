@@ -6,7 +6,7 @@ const setupLogs = require("./app/Log");
 const routes = require("./app/Routes");
 const path = require("path");
 
-server.use("/storage", express.static("public"));
+server.use("/static", express.static("public"));
 
 setupLogs(server);
 
