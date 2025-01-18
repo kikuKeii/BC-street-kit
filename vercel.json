@@ -4,14 +4,15 @@
     "regions": ["sin1"],
     "builds": [
       {
-        "src": "src/index.js",
-        "use": "@vercel/node"
+       "src": "index.js",
+       "use": "@vercel/node",
+       "config": { "includeFiles": ["dist/**"] }
       }
-    ],
+     ],
     "routes": [
       {
         "src": "/.*",
-        "dest": "src/index.js"
+        "dest": "index.js"
       }
     ]
   }

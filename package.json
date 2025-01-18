@@ -1,16 +1,16 @@
 {
-  "name": "starter-express-api-vercel",
+  "name": "bakung-cimentul-street-kit",
   "version": "1.0.0",
-  "description": "Starter Express API deploy on Vercel",
+  "description": "BC Street Kit API deploy on Vercel",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikuKeii/starter-express-api-vercel.git"
+    "url": "git+https://github.com/kikuKeii/BC-street-kit.git"
   },
   "keywords": [
     "Starter",
@@ -22,15 +22,15 @@
   "author": "kikukeii, Miftakhuddin Falaki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kikuKeii/starter-express-api-vercel/issues"
+    "url": "https://github.com/kikuKeii/BC-street-kit/issues"
   },
-  "homepage": "https://github.com/kikuKeii/starter-express-api-vercel#readme",
+  "homepage": "https://github.com/kikuKeii/BC-street-kit#readme",
   "dependencies": {
+    "axios": "^1.7.9",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "request": "^2.88.2"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

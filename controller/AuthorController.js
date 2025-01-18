@@ -1,16 +1,12 @@
-const URL = require("../helper/MainHelper"); //get URL From MainHelper
-var request = require("request");
-var cheerio = require("cheerio");
+const URL = require("../helper/MainHelper");
+const axios = require("axios");
+const cheerio = require("cheerio");
 
-
-exports.index = (req, res) => {
-    //request element from URL
-    request(URL.github_URL, function (error, response, body) {
-        if (error) {
-            res.send(response.statusCode);
-        }
-        var list = []; //create array Vaeiable for results list CSS Selector
-        var $ = cheerio.load(body);
+exports.index = async (req, res) => {
+    try {
+        const response = await axios.get(URL.github_URL);
+        const list = [];
+        const $ = cheerio.load(response.data);
         const gitHub = URL.github_URL;
         $(".js-profile-editable-replace").each((i, e) => {
             const fullName = $(e).find("span.vcard-fullname").text();
@@ -31,17 +27,17 @@ exports.index = (req, res) => {
                 imgProfile,
                 desc
             },
-            {
-                followers,
-                following
-            },
-            {
-                organization,
-                location,
-                url,
-                socialLink,
-                gitHub
-            })
+                {
+                    followers,
+                    following
+                },
+                {
+                    organization,
+                    location,
+                    url,
+                    socialLink,
+                    gitHub
+                })
         })
         //send json response
         res.json([
@@ -51,8 +47,10 @@ exports.index = (req, res) => {
             },
             {
                 author: list,
-                support : "https://ko-fi.com/X8X031K5P"
+                support: "https://ko-fi.com/X8X031K5P"
             }
         ])
-    })
+    } catch (error) {
+        res.send(error.response.status);
+    }
 };
