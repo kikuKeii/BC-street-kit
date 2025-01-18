@@ -4,11 +4,17 @@ const app = require("./app/Loader");
 const setupCors = require("./app/Cors");
 const setupLogs = require("./app/Log");
 const routes = require("./app/Routes");
+const path = require("path");
 
 server.use("/cdn", express.static("public"));
 
 setupLogs(server);
+
 setupCors(server);
+
+server.set("view engine", "ejs");
+
+server.set("views", path.join(__dirname, "views"));
 
 server.use("/", routes);
 
