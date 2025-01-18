@@ -11,4 +11,5 @@ router.get("/api/author", AuthorController.index);
 router.get("/api/users", MainController.users);
 router.get("/api/users/s", MainController.usersSearch);
 
+// router.get("/home", Home.homePage);
 module.exports = router;
