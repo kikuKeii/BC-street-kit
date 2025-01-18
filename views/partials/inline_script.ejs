@@ -1,0 +1,32 @@
+<script>
+  function initial(e_reanderSection, e_section) {
+    const app = $(e_reanderSection);
+    const section = $(e_section);
+    section.children().appendTo(app);
+    section.remove();
+  }
+
+  addEventListener("load", () => {
+    const header = $(".e_header");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        if (!header.hasClass("fixed-top")) {
+          header.addClass("fixed-top").css("background-color", "#f5f5f5cc");
+          header.removeClass("container")
+          header.stop(true, true).fadeIn(500);
+        }
+      } else {
+        if (header.hasClass("fixed-top")) {
+          header.addClass("container")
+          header.removeClass("fixed-top").css("background-color", "transparent");
+        }
+      }
+    });
+  });
+
+  function c_toggle(e_show, e_hide) {
+    $(e_hide).hide();
+    $(e_show).show(300);
+  }
+</script>

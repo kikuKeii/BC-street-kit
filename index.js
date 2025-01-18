@@ -6,7 +6,7 @@ const setupLogs = require("./app/Log");
 const routes = require("./app/Routes");
 const path = require("path");
 
-server.use("/cdn", express.static("public"));
+server.use("/storage", express.static("public"));
 
 setupLogs(server);
 
@@ -22,9 +22,8 @@ server.use((req, res) => {
   return res.status(404).json({
     status: 404,
     method: req.method,
-    route: `${req.protocol}://${req.hostname}${
-      req.port != 80 ? `:${app.port}` : ""
-    }${req.originalUrl}`,
+    route: `${req.protocol}://${req.hostname}${req.port != 80 ? `:${app.port}` : ""
+      }${req.originalUrl}`,
     message: `Not found`,
   });
 });

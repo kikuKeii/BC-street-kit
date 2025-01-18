@@ -1,0 +1,192 @@
+<%- include('../template/main', { reanderId: '#app', sectionId: '#section' }) %>
+
+<div id="section">
+  <div class="container my-5" id="home">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Hello!!</h1>
+        <p class="lead"><%= about %></p>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src="/storage/assets/img/hero.png" alt="" width="720">
+      </div>
+    </div>
+  </div>
+  <div class="container" id="features">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="display-5 fw-bold">Features</p>
+      </div>
+      <div class="row g-4 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <i class="bi bi-toggles">
+            </i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Easy to Use</h3>
+          <p>Clone the repository and start customizing it to fit your needs effortlessly.</p>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <i class="bi bi-code"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">User Friendly</h3>
+          <p>Easy to understand and accessible codebase to get you started quickly.</p>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <i class="bi bi-memory"></i>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Full of Memories</h3>
+          <p>I remember when I made this I used it to approach a girl I liked.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="pricing">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="display-5 fw-bold">Pricing</p>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Free</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Open repository</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$50<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Support 12/2</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$500<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Support 12/7</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="FAQs">
+    <div class="row">
+    </div>
+  </div>
+  <div class="container-fluid bg-dark" id="faq">
+    <div class="container">
+      <div class="col-md-12">
+        <p class="display-5 fw-bold text-secondary">FAQs</p>
+      </div>
+      <div class="row g-4 row-cols-1">
+        <div class="col">
+          <a class="text-decoration-none" data-bs-toggle="collapse" href="#q1" role="button" aria-expanded="true" aria-controls="q1">
+            1. How to Run this? <i class="bi bi-cursor"></i>
+          </a>
+          <div class="mt-2 collapse show" id="q1">
+            <div class="card card-body bg-light ">
+              Clone this repository:
+              <code>git clone https://github.com/kikuKeii/BC-street-kit.git</code><br>
+              Install packages (use yarn or npm):
+              <code>npm install</code><br>
+              Start server:
+              <code>npm run start</code><br>
+              or
+              <code>npm run dev</code> <small>(you have to install nodemon on your computer)</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <a class="text-decoration-none" data-bs-toggle="collapse" href="#q2" role="button" aria-expanded="false" aria-controls="q2">
+            2. Is this free? <i class="bi bi-cursor"></i>
+          </a>
+          <div class="collapse mt-2" id="q2">
+            <div class="card card-body bg-light">
+              <p>Yes because I made this open source. It's just that if you want to support me, you can donate to me.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <a class="text-decoration-none" data-bs-toggle="collapse" href="#q3" role="button" aria-expanded="false" aria-controls="q3">
+            3. How to Donate? <i class="bi bi-cursor"></i>
+          </a>
+          <div class="collapse mt-2" id="q3">
+            <div class="card card-body bg-light">
+              <div class="w-100 d-flex justify-content-between">
+                <span>You can donate on Ko-Fi</span>
+                <a href="https://ko-fi.com/X8X031K5P" rel="nofollow"><img src="https://camo.githubusercontent.com/70e2ef5e0263b261f9a2a314bb1d6919d1d43292eed117fe8fc766a68c7d96ea/68747470733a2f2f6b6f2d66692e636f6d2f696d672f676974687562627574746f6e5f736d2e737667" alt="ko-fi" data-canonical-src="https://ko-fi.com/img/githubbutton_sm.svg" style="max-width: 100%;"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <a class="text-decoration-none" data-bs-toggle="collapse" href="#q4" role="button" aria-expanded="false" aria-controls="q4">
+            4. How to contribute? <i class="bi bi-cursor"></i>
+          </a>
+          <div class="collapse mt-2" id="q4">
+            <div class="card card-body bg-light">
+              <p>Open <a href="http://github.com/kikuKeii/BC-street-kit" target="_blank" rel="noopener noreferrer">repository</a>,
+                fork the repository, commit your changes, and submit a pull request.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <a class="text-decoration-none" data-bs-toggle="collapse" href="#q5" role="button" aria-expanded="false" aria-controls="q5">
+            5. how can I contact you? <i class="bi bi-cursor"></i>
+          </a>
+          <div class="collapse mt-2" id="q5">
+            <div class="card card-body bg-light">
+              <p>You can contact me on <a href="mailto:kiki@devkikinian.click">Email</a>. More information <a href="http://kiki.my.id" target="_blank" rel="noopener noreferrer">Here</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col py-1"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="about">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="display-5 fw-bold">About</p>
+      </div>
+      <div class="col-md-12 border mb-2">
+        <p><span class="fw-bold">BC Street Kit</span> is a minimalist starter kit designed to help developers kickstart projects using <span class="fw-bold">Express.js</span>. It provides a clean, simple structure for building scalable applications, perfect for both beginners and experienced developers.</p>
+
+        The name "BC" stands for <span class="fw-bold">Bakung Cimentul</span>, inspired by a small area in Tangerang known for its unique charm.
+      </div>
+      <div class="col-md-12">
+        Why Choose BC Street Kit?
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><span class="fw-bold">Easy to Use:</span> Simply clone the repository and customize it to suit your project effortlessly.</li>
+          <li class="list-group-item"><span class="fw-bold">User Friendly:</span> The codebase is clean and easy to understand, ensuring a smooth and fast start.</li>
+          <li class="list-group-item"><span class="fw-bold">Full of Memories:</span> This kit holds sentimental value—it was first created during a special time in my life as I worked on it to impress someone I admired.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
